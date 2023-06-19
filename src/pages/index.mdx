@@ -1,0 +1,35 @@
+import { SparkleIcon } from '@/components/SparkleIcon'
+import { generateRssFeed } from '@/lib/generateRssFeed'
+
+export async function getStaticProps() {
+  if (process.env.NODE_ENV === 'production') {
+    await generateRssFeed()
+  }
+  return { props: {} }
+}
+
+---
+
+![](@/images/sciencedirect.png)
+
+## Original software publication {{ date: '2022-11-25T00:00Z' }}
+
+The problexity module is now available in the [Neurocomputing](https://www.sciencedirect.com/science/article/pii/S0925231222014461) journal. If you use problexity in your research, please use the following bibtex entry:
+
+```bibtex
+@article{komorniczak2023problexity,
+  title={problexity—an open-source python library for supervised learning problem complexity assessment},
+  author={komorniczak, joanna and ksieniewicz, pawe{\l}},
+  journal={neurocomputing},
+  volume={521},
+  pages={126--136},
+  year={2023},
+  publisher={elsevier}
+}
+```
+
+---
+
+## problexity v0.3.0 {{  date: '2022-06-19T00:00Z' }}
+
+Publication of the first public version of the problexity module. It is an open-source python library containing the implementation of measures describing the complexity of the classification and regression problems. the package contains a complexitycalculator model, allowing the calculation, analysis and visualization of problem complexity measures.
